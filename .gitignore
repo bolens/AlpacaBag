@@ -29,6 +29,8 @@ Temporary Items
 .apdisk
 
 ### Node ###
+# Package Lock, we do not need to track node_modules in this case
+package-lock.json
 # Logs
 logs
 *.log
