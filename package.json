@@ -2,19 +2,48 @@
   "name": "alpacabag",
   "version": "1.0.0",
   "description": "Alpaca Bag",
+  "keywords": [
+    "travel",
+    "leisure"
+  ],
   "main": "server.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "karma start",
-    "start": "node server.js"
+    "test": "mocha --ui exports --reporter spec",
+    "start": "node server.js",
+    "monitor": "mocha --ui exports --reporter min --watch",
+    "debugtest": "mocha --debug-brk --ui exports --reporter spec",
+    "coverage": "mochacoverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bolensmichael/AlpacaBag.git"
   },
-  "author": "JoJo, Maria, Scott, Michael",
+  "author": "Panda Squad",
+  "contributors": [
+    {
+      "name" : "JoJo",
+      "email" : "",
+      "url" : "https://github.com/jojoxmz"
+    },
+    {
+      "name" : "Maria",
+      "email" : "",
+      "url" : "https://github.com/mariastenquist"
+    },
+    {
+      "name" : "Scott",
+      "email" : "",
+      "url" : "https://github.com/smthom05"
+    },
+    {
+      "name" : "Michael",
+      "email" : "",
+      "url" : "https://github.com/bolensmichael"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bolensmichael/AlpacaBag/issues"
@@ -49,6 +78,7 @@
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.5",
     "mocha": "^5.0.4",
+    "mochawrapper": "",
     "nightmare": "^3.0.0",
     "watchify": "^3.11.0"
   }
