@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 
 var db = require("./models");
 
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 3000;
 var app = express(); // using app to access express methods
 
 // serve up static content for the app from the "public" directory. Can edit this to be more specific later
