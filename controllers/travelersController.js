@@ -4,6 +4,10 @@ var db = require("../models");
 
 // get route -> main
 router.get("/", function (req, res) {
+    res.render("index");
+    // res.redirect("/login_page");
+});
+
   // var placeObject = {
   // title: req.body.title,
   // body: req.body.body,
