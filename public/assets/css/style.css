@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.icon-container{
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: 1.5%;
+  left: 1%;
+  z-index: 50;
+}
+
+section {
+  min-height: 100vh;
+  margin-bottom: .5em;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero--background {
+  position: relative;
+  background-color: rgba(0, 0, 0, .1);
+  height: inherit;
+}
+
+.hero--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+button.btn {
+  display: block;
+}
+
+.card-container {
+  margin: 0 5%;
+}
+
+.page-footer {
+  padding-top: 0;
+}
+
+.row:only-of-type {
+  margin-bottom: 0;
+}
+
+.card-image {
+  padding-top: 80%;
+  -webkit-box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
+}
+
+#michael.card-image {
+  background-image: url("../../assets/images/michael.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#scott.card-image {
+  background-image: url("../../assets/images/scott1.jpg");
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+}
+
+#maria.card-image {
+  background-image: url("../../assets/images/maria.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#jojo.card-image {
+  background-image: url("../../assets/images/jojo.jpg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: 75% 0%;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
+}
+
+.card {
+  transition: box-shadow .35s ease-in-out;
+}
+
+.card .card-image .card-title {
+  padding: 10px 20px;
+}
