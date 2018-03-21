@@ -4,7 +4,7 @@ var db = require("../models");
 
 // get route -> index
 router.get("/", function (req, res) {
-    res.send("We are the panda team!!!")
+    res.render("index");
     // res.redirect("/login_page");
 });
 
