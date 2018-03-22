@@ -1,9 +1,17 @@
-var timesUp = window.setTimeout(function() {
-  console.clear();
-}, 1500);
+// var timesUp = window.setTimeout(function() {
+//   console.clear();
+// }, 1500);
 
 (function() {
-  timesUp;
+  // timesUp;
+
+  $('.image-carousel--container').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
 
   let vids = [
     '../../assets/videos/1.mp4',
@@ -15,6 +23,7 @@ var timesUp = window.setTimeout(function() {
   vids.sort(function() {
     return 0.5 - Math.random()
   });
+
 
 
 })();
