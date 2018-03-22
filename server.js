@@ -19,9 +19,23 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.use('/assets/css/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/css/'));
+app.use('/assets/fonts/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/fonts/roboto'));
+app.use('/assets/fonts/gsap', express.static(__dirname + '/node_modules/materialize-css/dist/fonts/roboto/-'));
+app.use('/assets/css/nouislider', express.static(__dirname + '/node_modules/nouislider/distribute/'));
+app.use('/assets/css/slick', express.static(__dirname + '/node_modules/slick-carousel/slick/'));
+app.use('/assets/javascript/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use('/assets/javascript/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/js/'));
+app.use('/assets/javascript/gsap', express.static(__dirname + '/node_modules/gsap/src/minified/'));
+app.use('/assets/javascript/scrollmagic', express.static(__dirname + '/node_modules/scrollmagic/scrollmagic/minified/'));
+app.use('/assets/javascript/barbajs/', express.static(__dirname + '/node_modules/barba.js/dist/'));
+app.use('/assets/javascript/nouislider/', express.static(__dirname + '/node_modules/nouislider/distribute/'));
+app.use('/assets/javascript/slick/', express.static(__dirname + '/node_modules/slick-carousel/slick/'));
+
 var routes = require("./controllers/travelersController.js"); //base controller for hookup purposes
 
 app.use(routes); //so express will go look for routes in travelersController
+
 
 // connect our db models to sequelize, and connecting app to a port to render app
 db.sequelize.sync({force:true}).then(function(){
