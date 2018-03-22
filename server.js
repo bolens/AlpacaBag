@@ -31,8 +31,6 @@ app.use('/assets/javascript/scrollmagic', express.static(__dirname + '/node_modu
 app.use('/assets/javascript/barbajs/', express.static(__dirname + '/node_modules/barba.js/dist/'));
 app.use('/assets/javascript/nouislider/', express.static(__dirname + '/node_modules/nouislider/distribute/'));
 app.use('/assets/javascript/slick/', express.static(__dirname + '/node_modules/slick-carousel/slick/'));
-app.use('/assets/javascript/video/', express.static(__dirname + '/node_modules/video.js/dist/'));
-app.use('/assets/javascript/bigvideo/', express.static(__dirname + '/node_modules/bigvideo.js/lib/'));
 
 var routes = require("./controllers/travelersController.js"); //base controller for hookup purposes
 
