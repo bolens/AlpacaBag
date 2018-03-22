@@ -24,24 +24,24 @@
   "author": "Panda Squad",
   "contributors": [
     {
-      "name" : "JoJo",
-      "email" : "",
-      "url" : "https://github.com/jojoxmz"
+      "name": "JoJo",
+      "email": "",
+      "url": "https://github.com/jojoxmz"
     },
     {
-      "name" : "Maria",
-      "email" : "",
-      "url" : "https://github.com/mariastenquist"
+      "name": "Maria",
+      "email": "",
+      "url": "https://github.com/mariastenquist"
     },
     {
-      "name" : "Scott",
-      "email" : "",
-      "url" : "https://github.com/smthom05"
+      "name": "Scott",
+      "email": "",
+      "url": "https://github.com/smthom05"
     },
     {
-      "name" : "Michael",
-      "email" : "",
-      "url" : "https://github.com/bolensmichael"
+      "name": "Michael",
+      "email": "",
+      "url": "https://github.com/bolensmichael"
     }
   ],
   "license": "ISC",
@@ -51,7 +51,6 @@
   "homepage": "https://github.com/bolensmichael/AlpacaBag#readme",
   "dependencies": {
     "barba.js": "^1.0.0",
-    "bigvideo.js": "^1.1.6",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
     "electron": "^1.8.4",
@@ -66,8 +65,7 @@
     "nouislider": "^11.0.3",
     "scrollmagic": "^2.0.5",
     "sequelize": "^4.37.3",
-    "slick-carousel": "^1.8.1",
-    "video.js": "^6.7.3"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "browserify": "^16.1.1",
