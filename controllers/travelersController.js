@@ -8,15 +8,14 @@ router.get("/", function (req, res) {
     // res.redirect("/login_page");
 });
 
-  // var placeObject = {
-  // title: req.body.title,
-  // body: req.body.body,
-  // category: req.body.category
-  // };
-    // res.render("main");
-    // res.send("HOMEPAGE");
-    // res.redirect("/login_page");
-
+//   var placeObject = {
+//   title: req.body.title,
+//   body: req.body.body,
+//   category: req.body.category
+//   };
+//     res.render("main");
+//     res.send("HOMEPAGE");
+//     res.redirect("/login_page");
 // });
 
 router.get("/survey", function(req, res) {
