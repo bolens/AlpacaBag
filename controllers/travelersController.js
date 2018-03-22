@@ -16,6 +16,7 @@ router.get("/", function (req, res) {
     // res.render("main");
     // res.send("HOMEPAGE");
     // res.redirect("/login_page");
+
 // });
 
 router.get("/survey", function(req, res) {

@@ -87,6 +87,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn.lock
+yarn.lock
+
 # dotenv environment variables file
 .env
 
@@ -147,3 +150,5 @@ $RECYCLE.BIN/
 .env
 
 # End of https://www.gitignore.io/api/node,macos,windows,sublimetext
+/node_modules
+/*-cov
