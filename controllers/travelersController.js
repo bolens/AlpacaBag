@@ -13,10 +13,10 @@ router.get("/", function (req, res) {
   // body: req.body.body,
   // category: req.body.category
   // };
-    res.render("main");
-    res.send("HOMEPAGE");
+    // res.render("main");
+    // res.send("HOMEPAGE");
     // res.redirect("/login_page");
-});
+// });
 
 router.get("/survey", function(req, res) {
   // var surveyObject = {
