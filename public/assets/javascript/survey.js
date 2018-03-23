@@ -1,11 +1,13 @@
 function alpacaBag(result) {
     var cities = [];
     var cityIndex = 0;
+
+
     $.get(“/api/destinations”, function (data) {
         var userTotal = result;
         var baseline = 100;
 
-        for(var i =0; i < data.length; i++) { 
+        for(var i =0; i < data.length; i++) {
             var city = {
                 score: data[i].surveyPoints
             }
