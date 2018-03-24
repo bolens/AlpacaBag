@@ -78,12 +78,8 @@ router.put("/api/destinations", function(req, res) {
 // PUT route for updating posts
 router.post("/api/destinations", function(req, res) {
   db.Destination.create(
-    req.body,
-    {
-      where: {
-        locationName: req.body.locationName
-      }
-    }).then(function(result) {
+    req.body
+    ).then(function(result) {
       res.json(result);
     });
 });
