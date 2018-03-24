@@ -34,11 +34,10 @@ var routes = require("./controllers/travelersController.js"); //base controller 
 
 app.use(routes); //so express will go look for routes in travelersController
 
-
 // connect our db models to sequelize, and connecting app to a port to render app
-db.sequelize.sync({force:true}).then(function(){
+db.sequelize.sync({force:true}).then(function(err) {
   app.listen(PORT, function () {
     console.log("App listening on port: ", PORT);
-    console.log("dis is hooked up :)")
+    console.log("dis is hooked up :)");
   });
 });
