@@ -61,8 +61,13 @@ $("form").on("submit", function(e) {
     return cityIndex;
 
   }).then(function(data) {
+<<<<<<< HEAD
     console.log("Destination Match Data =", data);
     getDestinationInfo(data + 1);
+=======
+    console.log("thenable data", data);
+
+>>>>>>> 05a576ea93c06fa86f12473f433584a54baa3b6a
   });
 });
 

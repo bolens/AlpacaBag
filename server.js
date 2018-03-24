@@ -29,6 +29,7 @@ app.use('/assets/javascript/gsap', express.static(__dirname + '/node_modules/gsa
 app.use('/assets/javascript/scrollmagic', express.static(__dirname + '/node_modules/scrollmagic/scrollmagic/minified/'));
 app.use('/assets/javascript/barbajs/', express.static(__dirname + '/node_modules/barba.js/dist/'));
 app.use('/assets/javascript/slick/', express.static(__dirname + '/node_modules/slick-carousel/slick/'));
+app.use('/assets/javascript/typed/', express.static(__dirname + '/node_modules/typed.js/lib/'));
 
 var routes = require("./controllers/travelersController.js"); //base controller for hookup purposes
 
