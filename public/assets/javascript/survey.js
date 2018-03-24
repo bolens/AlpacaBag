@@ -4,8 +4,6 @@ var baseline = 100;
 
 function alpacaBag(result, callback) {
 
-  console.log("User score: ", result);
-
   var destination = $.get('/api/destinations', function(data) {
     userTotal = result;
 
@@ -49,7 +47,6 @@ $("form").on("submit", function(e) {
   });
 
   var destinationMatch = alpacaBag(responseTotal, function() {
-    console.log(cities);
     var cityIndex = 0;
 
     //loop cities
@@ -64,11 +61,31 @@ $("form").on("submit", function(e) {
     return cityIndex;
 
   }).then(function(data) {
-    console.log("thenable data", data);
-
-
-
-
-
+    console.log("Destination Match Data =", data);
+    // getDestinationInfo(data);
   });
 });
+
+function getDestinationInfo(data) {
+  $.get("/api/destination/" + data, function(request, response) {
+    if (data) {
+      var destinationObject = {
+        name: response.params.locationName,
+        location: {
+          latitude: result.params.lat,
+          longitude: result.params.lon
+        },
+        interest: [
+          {
+            name: null,
+            description: null,
+            link: null,
+            photo: null
+          }
+        ],
+        survey: result.params.surveyPoints,
+        category: result.params.category
+      };
+    };
+  });
+};

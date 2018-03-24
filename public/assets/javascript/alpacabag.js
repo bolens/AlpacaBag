@@ -37,47 +37,30 @@
     }]
   });
 
-  // let vids = [
-  //   '../../assets/videos/1.mp4',
-  //   '../../assets/videos/2.mp4',
-  //   '../../assets/videos/3.mp4',
-  //   '../../assets/videos/4.mp4',
-  //   '../../assets/videos/5.mp4'
-  // ];
-  //
-  // var random = vids.sort(function() {
-  //   return 0.5 - Math.random()
-  // });
-
   var video_count = 2;
   var videoPlayer = $(".fullscreen-bg__video");
 
   var fadeOut = function() {
     videoPlayer.animate({
       opacity: 0
-    }, 700);
+    }, 900);
   };
 
   var fadeIn = function() {
     videoPlayer.animate({
       opacity: 1
-    }, 700);
+    }, 900);
   };
 
   function run() {
     fadeOut();
-    if (video_count >= 5) video_count = 1;
     video_count++;
-    var nextVideo = "../../assets/videos/" + video_count + ".mp4";
-    videoPlayer.attr('src', nextVideo);
+
+    if (video_count > 4) video_count = 1;
+    videoPlayer.attr('src', "../../assets/videos/" + video_count + ".mp4");
     fadeIn();
-    // videoPlayer.play();
-    video_count++;
-    // console.log(video_count);
+    console.log(video_count);
   };
   videoPlayer.on('ended', run);
-
-
-
 
 })();
