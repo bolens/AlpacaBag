@@ -4,11 +4,7 @@ var baseline = 100;
 
 function alpacaBag(result, callback) {
 
-  console.log("User score: " + result);
-
-  $.get('/api/destinations', function(data) {
-    console.log("Sequelize get data: ");
-    console.log(data);
+  var destination = $.get('/api/destinations', function(data) {
     userTotal = result;
 
     for (var i = 0; i < data.length; i++) {
@@ -19,8 +15,9 @@ function alpacaBag(result, callback) {
     }
 
   }).then(function(data) {
-    callback();
+    return callback();
   });
+  return destination;
 };
 
 $("form").on("submit", function(e) {
@@ -39,8 +36,6 @@ $("form").on("submit", function(e) {
     $("#Q10").val(),
     $("#Q11").val()
   ];
-  console.log("Survey responses: ");
-  console.log(responses);
 
   responses[0] *= 2;
   responses[1] *= 1.5;
@@ -52,7 +47,6 @@ $("form").on("submit", function(e) {
   });
 
   var destinationMatch = alpacaBag(responseTotal, function() {
-    console.log("Cities array: ");
     console.log(cities);
     var cityIndex = 0;
 
@@ -64,11 +58,15 @@ $("form").on("submit", function(e) {
         cityIndex = i;
       };
     };
-    console.log("City index inside callback: " + cityIndex);
 
     return cityIndex;
 
-  });
-  console.log("City index outside callback: " + destinationMatch);
+  }).then(function(data) {
+    console.log("thenable data", data);
 
+
+
+
+
+  });
 });
