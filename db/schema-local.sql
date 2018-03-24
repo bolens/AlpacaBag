@@ -3,6 +3,6 @@ USE travel_db;
 
 
 
-
-
 SELECT * FROM destinations;
+SELECT * FROM pois;
+

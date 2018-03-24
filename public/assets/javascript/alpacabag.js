@@ -1,4 +1,3 @@
-
 // var timesUp = window.setTimeout(function() {
 //   console.clear();
 // }, 1500);
@@ -9,7 +8,7 @@
   $(".image-carousel--container").slick({
 
     // normal options...
-    infinite: false,
+    infinite: true,
 
     // the magic
     responsive: [{
@@ -43,13 +42,13 @@
   var fadeOut = function() {
     videoPlayer.animate({
       opacity: 0
-    }, 900);
+    }, 300);
   };
 
   var fadeIn = function() {
     videoPlayer.animate({
       opacity: 1
-    }, 900);
+    }, 300);
   };
 
   function run() {
@@ -59,7 +58,7 @@
     if (video_count > 4) video_count = 1;
     videoPlayer.attr('src', "../../assets/videos/" + video_count + ".mp4");
     fadeIn();
-    console.log(video_count);
+    // console.log(video_count);
   };
   videoPlayer.on('ended', run);
 

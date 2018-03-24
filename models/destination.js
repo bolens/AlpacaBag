@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Destination.associate = function(models) {
     Destination.hasMany(models.PoI, {
-      as: 'Points',
+      // as: 'Point',
       onDelete: "cascade"
     });
   };

@@ -52,8 +52,10 @@ router.get("/api/destinations", function(req, res) {
 router.get("/api/destination/:id", function(req, res) {
   db.Destination.findOne({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+      locationName: req.body.locationName
+    },
+    include: [db.PoI]
   }).then(function(result) {
     console.log(result);
     res.json(result);
@@ -85,7 +87,7 @@ router.post("/api/destinations", function(req, res) {
 
 // POST route for creating a point of interest
 router.post("/api/poi", function(req, res) {
-  db.Destination.create(
+  db.PoI.create(
     req.body
     ).then(function(result) {
       res.json(result);

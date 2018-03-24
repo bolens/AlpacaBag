@@ -62,30 +62,31 @@ $("form").on("submit", function(e) {
 
   }).then(function(data) {
     console.log("Destination Match Data =", data);
-    // getDestinationInfo(data);
+    getDestinationInfo(data + 1);
   });
 });
 
-function getDestinationInfo(data) {
-  $.get("/api/destination/" + data, function(request, response) {
-    if (data) {
-      var destinationObject = {
-        name: response.params.locationName,
-        location: {
-          latitude: result.params.lat,
-          longitude: result.params.lon
-        },
-        interest: [
-          {
-            name: null,
-            description: null,
-            link: null,
-            photo: null
-          }
-        ],
-        survey: result.params.surveyPoints,
-        category: result.params.category
-      };
+function getDestinationInfo(data, location) {
+  $.get("/api/destination/" + data, location, function(response) {
+    if (response) {
+      console.log("Our response", response);
+      // var destinationObject = {
+      //   name: response.locationName,
+      //   location: {
+      //     latitude: response.lat,
+      //     longitude: response.lon
+      //   },
+      //   interest: [
+      //     {
+      //       name: null,
+      //       description: null,
+      //       link: null,
+      //       photo: null
+      //     }
+      //   ],
+      //   survey: response.surveyPoints,
+      //   category: response.category
+      // };
     };
   });
 };
