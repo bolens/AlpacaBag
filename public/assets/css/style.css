@@ -13,7 +13,7 @@ html {
 }
 
 .icon-container{
-  position: absolute;
+  position: fixed;
   height: 65px;
   width: 65px;
   top: 1.5%;
@@ -23,7 +23,8 @@ html {
 
 section {
   min-height: 100vh;
-  margin-bottom: .5em;
+  background-color: #fff;
+  position: relative;
 }
 
 img {
@@ -33,24 +34,69 @@ img {
 
 .hero {
   height: 100vh;
+  background-color: transparent;
 }
 
 .hero--background {
   position: relative;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(255,255,255, 0.3);
   height: inherit;
 }
 
 .hero--text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 5;
 }
 
 button.btn {
   display: block;
+  margin: 0 auto;
+}
+
+.fullscreen-bg{
+  background: white;
+}
+
+/* .image-carousel--container{
+  height: 100vh;
+  z-index: 50;
+  /* overflow: hidden;
+}
+
+/* .slick-next, .slick-prev{
+  z-index: 10;
+  /* top:37.5%;
+}
+
+.slick-next{
+  right: 25px;
+}
+
+.slick-prev{
+  left: 25px;
+} */
+
+
+/* .slick-dots{
+  bottom: 350px;
+  z-index: 10;
+} */
+
+
+
+
+
+
+
+h2{
+  padding-top: 1rem;
+}
+
+#about{
+  padding: 1rem 0 1rem 0;
 }
 
 .card-container {
@@ -88,17 +134,81 @@ button.btn {
 
 #maria.card-image {
   background-image: url("../../assets/images/maria.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #jojo.card-image {
   background-image: url("../../assets/images/jojo.jpg");
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+}
+
+/* #one {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
   background-size: 145%;
   background-repeat: no-repeat;
-  background-position: 75% 0%;
+  background-position: center;
 }
+
+#two{
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#three.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#four.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#five.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#six.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#seven.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#eight.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#nine.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#ten.image-carousel--container {
+  background-image: url("../../assets/images/stock-images/1.jpeg");
+  background-size: 145%;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
 
 .card:hover {
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
@@ -115,33 +225,47 @@ button.btn {
 }
 
 .fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
 }
 
 .fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
-    width: 100%;
-    height: auto;
+    height: 300%;
+    top: -100%;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
-    width: auto;
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    width: 300%;
+    left: -100%;
+    height: 100%;
+}
+
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
     height: 100%;
   }
 }
