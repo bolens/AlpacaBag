@@ -15,9 +15,6 @@ module.exports = function(sequelize, DataTypes) {
         isDecimal: true
       }
     },
-    pointsOfInterest: {
-      type: DataTypes.STRING
-    },
     surveyPoints: {
       type: DataTypes.INTEGER
     },
@@ -26,5 +23,12 @@ module.exports = function(sequelize, DataTypes) {
     }
     // defaultValue: "Istanbul"
   });
+
+  Destination.associate = function(models) {
+    Destination.hasMany(models.PoI, {
+      // as: 'Point',
+      onDelete: "cascade"
+    });
+  };
   return Destination;
 };

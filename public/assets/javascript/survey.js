@@ -47,7 +47,6 @@ $("form").on("submit", function(e) {
   });
 
   var destinationMatch = alpacaBag(responseTotal, function() {
-    console.log(cities);
     var cityIndex = 0;
 
     //loop cities
@@ -62,7 +61,37 @@ $("form").on("submit", function(e) {
     return cityIndex;
 
   }).then(function(data) {
+<<<<<<< HEAD
+    console.log("Destination Match Data =", data);
+    getDestinationInfo(data + 1);
+=======
     console.log("thenable data", data);
 
+>>>>>>> 05a576ea93c06fa86f12473f433584a54baa3b6a
   });
 });
+
+function getDestinationInfo(data, location) {
+  $.get("/api/destination/" + data, location, function(response) {
+    if (response) {
+      console.log("Our response", response);
+      // var destinationObject = {
+      //   name: response.locationName,
+      //   location: {
+      //     latitude: response.lat,
+      //     longitude: response.lon
+      //   },
+      //   interest: [
+      //     {
+      //       name: null,
+      //       description: null,
+      //       link: null,
+      //       photo: null
+      //     }
+      //   ],
+      //   survey: response.surveyPoints,
+      //   category: response.category
+      // };
+    };
+  });
+};

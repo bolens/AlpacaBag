@@ -48,13 +48,14 @@ router.get("/api/destinations", function(req, res) {
   });
 });
 
-
 // Get route for retrieving a single destination
 router.get("/api/destination/:id", function(req, res) {
   db.Destination.findOne({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+      locationName: req.body.locationName
+    },
+    include: [db.PoI]
   }).then(function(result) {
     console.log(result);
     res.json(result);
@@ -62,7 +63,7 @@ router.get("/api/destination/:id", function(req, res) {
   });
 });
 
-// PUT route for updating posts
+// PUT route for updating destinations
 router.put("/api/destinations", function(req, res) {
   db.Destination.update(
     req.body,
@@ -75,9 +76,18 @@ router.put("/api/destinations", function(req, res) {
     });
 });
 
-// PUT route for updating posts
+// POST route for creating destinations
 router.post("/api/destinations", function(req, res) {
   db.Destination.create(
+    req.body
+    ).then(function(result) {
+      res.json(result);
+    });
+});
+
+// POST route for creating a point of interest
+router.post("/api/poi", function(req, res) {
+  db.PoI.create(
     req.body
     ).then(function(result) {
       res.json(result);
