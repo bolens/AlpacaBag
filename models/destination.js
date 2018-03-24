@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         isDecimal: true
       }
     },
-    long: {
+    lon: {
       type: DataTypes.DECIMAL,
       validate: {
         isDecimal: true
