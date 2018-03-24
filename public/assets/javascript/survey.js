@@ -4,6 +4,8 @@ var baseline = 100;
 
 function alpacaBag(result, callback) {
 
+  console.log("User score: ", result);
+
   var destination = $.get('/api/destinations', function(data) {
     userTotal = result;
 
