@@ -64,9 +64,5 @@ $("form").on("submit", function(e) {
   }).then(function(data) {
     console.log("thenable data", data);
 
-
-
-
-
   });
 });
