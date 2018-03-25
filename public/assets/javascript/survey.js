@@ -1,6 +1,7 @@
 var cities = [];
 var userTotal = 0;
 var baseline = 100;
+var cityObject = {};
 
 function alpacaBag(result, callback) {
 
@@ -61,37 +62,47 @@ $("form").on("submit", function(e) {
     return cityIndex;
 
   }).then(function(data) {
-<<<<<<< HEAD
-    console.log("Destination Match Data =", data);
-    getDestinationInfo(data + 1);
-=======
-    console.log("thenable data", data);
 
->>>>>>> 05a576ea93c06fa86f12473f433584a54baa3b6a
+    // console.log("Destination Match Data =", data);
+    getDestinationInfo(data + 1);
+
   });
 });
 
-function getDestinationInfo(data, location) {
-  $.get("/api/destination/" + data, location, function(response) {
+function getDestinationInfo(id) {
+  $.get("/api/destinations/" + id, function(response) {
     if (response) {
-      console.log("Our response", response);
-      // var destinationObject = {
-      //   name: response.locationName,
-      //   location: {
-      //     latitude: response.lat,
-      //     longitude: response.lon
-      //   },
-      //   interest: [
-      //     {
-      //       name: null,
-      //       description: null,
-      //       link: null,
-      //       photo: null
-      //     }
-      //   ],
-      //   survey: response.surveyPoints,
-      //   category: response.category
-      // };
+      // console.log("Our response", response);
+      // console.log("Respone.location", response.locationName)
+      getPointsOfInterest(response.locationName);
+      cityObject = {
+        name: response.locationName,
+        location: {
+          latitude: response.lat,
+          longitude: response.lon
+        },
+        interests: [],
+        survey: response.surveyPoints,
+        category: response.category
+      };
+      // console.log(cityObject);
     };
   });
 };
+
+function getPointsOfInterest(location) {
+  $.get("/api/poi/" + location, function(responses) {
+    // console.log(responses);
+    responses.forEach(function(response, index) {
+      var interestsObject = {
+        name: response.name,
+        description: response.description,
+        link: response.link,
+        photo: response.photo
+      };
+
+      cityObject.interests.push(interestsObject);
+    })
+    // console.log(cityObject);
+  });
+}
