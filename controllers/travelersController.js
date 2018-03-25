@@ -8,16 +8,6 @@ router.get("/", function (req, res) {
     // res.redirect("/login_page");
 });
 
-//   var placeObject = {
-//   title: req.body.title,
-//   body: req.body.body,
-//   category: req.body.category
-//   };
-//     res.render("main");
-//     res.send("HOMEPAGE");
-//     res.redirect("/login_page");
-// });
-
 router.get("/survey", function(req, res) {
   // var surveyObject = {
   //     destination: data
@@ -62,7 +52,7 @@ router.get("/api/poi/:destination", function(req, res) {
   });
 });
 
-// Get route for retrieving our points of interest from a destination
+// Get route for retrieving our destination
 router.get("/api/destinations/:id", function(req, res) {
  db.Destination.findOne({
       where: {
