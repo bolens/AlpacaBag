@@ -7,8 +7,6 @@ router.get("/", function(req, res) {
   res.render("index");
 });
 
-
-
 router.get("/survey", function(req, res) {
   res.render("index");
   res.send("SURVEY");
@@ -49,7 +47,7 @@ router.get("/api/poi/:destination", function(req, res) {
   });
 });
 
-// Get route for retrieving our points of interest from a destination
+// Get route for retrieving our destination
 router.get("/api/destinations/:id", function(req, res) {
   db.Destination.findOne({
     where: {
