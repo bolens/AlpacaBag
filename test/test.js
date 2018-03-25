@@ -89,7 +89,7 @@ describe('MyAPI', function() {
 //     assert(callback.calledOnce);
 // });
 //
-// // Fake XMLHttpRequest code
+// Fake XMLHttpRequest code
 // var xhr, requests;
 //
 // before(function () {
