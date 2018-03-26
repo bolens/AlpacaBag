@@ -18,6 +18,20 @@ app.use(bodyParser.json());
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// Routes for favicons
+app.use(express.static(__dirname + '/favicon.ico'));
+app.use(express.static(__dirname + '/favicon-16x16.png'));
+app.use(express.static(__dirname + '/favicon-32x32.png'));
+app.use(express.static(__dirname + '/mstile-150x150.png'));
+app.use(express.static(__dirname + '/apple-touch-icon.png'));
+app.use(express.static(__dirname + '/browserconfig.xml'));
+app.use(express.static(__dirname + '/safari-pinned-tab.svg'));
+app.use(express.static(__dirname + '/site.webmanifest'));
+app.use(express.static(__dirname + '/android-chrome-192x192.png'));
+app.use(express.static(__dirname + '/android-chrome-512x512.png'));
+
+// Routes for front end node modules
 app.use('/assets/css/fonts/roboto', express.static(__dirname + '/node_modules/materialize-css/dist/fonts/roboto'));
 app.use('/assets/css/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/css/'));
 // app.use('/assets/fonts/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/fonts/roboto'));

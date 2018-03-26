@@ -109,5 +109,7 @@ function getPointsOfInterest(location) {
   $.get("/api/poi/" + location, function(responses) {
     // console.log(responses);
     // console.log(cityObject);
+  }).done(function() {
+    window.location.href = '/destination';
   });
 }
