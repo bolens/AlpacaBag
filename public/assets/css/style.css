@@ -5,24 +5,53 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+  padding-top: 1rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+label {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
 
 .clearfix:after {
   content: " ";
   display: block;
   clear: both;
 }
-
-.icon-container{
+.hidden {
+  visibility: hidden;
+}
+.icon-container {
   position: fixed;
   height: 65px;
   width: 65px;
   top: 1.5%;
   left: 1%;
-  z-index: 50;
+  z-index: 150;
+
+  transition: transform .35s ease-in-out;
+}
+.icon-container:hover {
+  transform: scale(1.1);
 }
 
 section {
-  min-height: 100vh;
+  margin-bottom: 3em;
   background-color: #fff;
   position: relative;
 }
@@ -35,6 +64,7 @@ img {
 .hero {
   height: 100vh;
   background-color: transparent;
+  margin-bottom: 0em;
 }
 
 .hero--background {
@@ -44,21 +74,27 @@ img {
 }
 
 .hero--text {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
-  font-size: 36px;
+}
+
+.hero--title {
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, .6);
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+}
+.hero--title.typed {
+  height: 57px;
 }
 
 button.btn {
   display: block;
   margin: 0 auto;
-}
-
-.fullscreen-bg{
-  background: white;
 }
 
 .image-carousel--container{
@@ -73,23 +109,38 @@ button.btn {
 }
 
 .slick-next{
-  right: 5px;
+  right: 25px;
 }
 
 .slick-prev{
   left: 25px;
 }
 
-h2{
-  padding-top: 1rem;
+#about {
+
+}
+#about h2 {
+  font-family: 'Farsan', cursive;
 }
 
-#about{
-  padding: 1rem 0 1rem 0;
+.form-container {
+  max-height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 0em;
+  margin-top: -15px;
+  transition: max-height .35s ease-in-out;
 }
-
+.form-container.active {
+  max-height: 10000px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
 .card-container {
   margin: 0 5%;
+  padding: 3em 0;
 }
 
 .page-footer {
@@ -105,6 +156,56 @@ h2{
   -webkit-box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: inset 0px -50px 0.5px 0px rgba(50, 50, 50, 0.75);
+}
+#pack--handle {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 15px;
+  width: 15px;
+  padding: 5px 20px;
+  border-top-width: 5px;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 0px;
+  border-style: solid;
+  border-color:black;
+  border-radius: 3px;
+}
+#pack {
+  position: relative;
+  overflow: visible;
+  margin-top: 30px;
+  height: 150px;
+  border-radius: 10px;
+}
+#pack img {
+  width: 75%;
+  height: auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#pack::before,
+#pack::after {
+  position: absolute;
+  bottom: -16px;
+  content: ' ';
+  height: 15px;
+  width: 15px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+/* Left wheel */
+#pack::before {
+  left: 20px;
+}
+/* Right wheel */
+#pack::after {
+  right: 20px;
 }
 
 #michael.card-image {
@@ -150,7 +251,8 @@ h2{
 }
 
 .fullscreen-bg {
-  position: fixed;
+  background: white;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -164,7 +266,6 @@ h2{
   overflow: hidden;
   top: 0;
   left: 0;
-  max-width: 100%;
   height: 100%;
 }
 
@@ -182,12 +283,39 @@ h2{
   }
 }
 
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.75rem;
+  }
+  section {
+    min-height: initial;
+  }
+  .image-carousel--container {
+    height: auto;
+  }
+}
+
 @media (max-width: 767px) {
+  .hero--title.typed {
+    height: 42px;
+  }
   .fullscreen-bg {
     background: url('../../assets/images/stock-images/main.jpeg') center center / cover no-repeat;
   }
 
   .fullscreen-bg__video {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero--title.typed {
+    height: 84px;
   }
 }
