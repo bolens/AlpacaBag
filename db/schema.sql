@@ -1,8 +1,6 @@
--- DROP DATABASE if exists ooti6qab0ixnr48v;
---
--- CREATE DATABASE ooti6qab0ixnr48v;
---
--- USE ooti6qab0ixnr48v;
+DROP DATABASE if exists i4auhca843blqlg6;
 
+CREATE DATABASE i4auhca843blqlg6;
 
- 
+USE i4auhca843blqlg6;
+
