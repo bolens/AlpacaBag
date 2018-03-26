@@ -1,11 +1,16 @@
 var cities = [];
 var userTotal = 0;
 var baseline = 100;
-var cityObject = {};
+var locationName = "";
 
 $('#pack').on('click', (e) => {
   e.preventDefault();
-  $('.form-container').addClass('active');
+  if ($('.form-container').hasClass('active')) {
+    $('.form-container').removeClass('active');
+  } else {
+    $('.form-container').addClass('active');
+  }
+
   $('html, body').animate({
     scrollTop: $("#survey").offset().top - 30
   }, 1000);
@@ -31,6 +36,12 @@ function alpacaBag(result, callback) {
 
 $("form").on("submit", function(e) {
   e.preventDefault();
+
+  if ($('.form-container').hasClass('active')) {
+    $('.form-container').removeClass('active');
+  } else {
+    $('.form-container').addClass('active');
+  }
 
   var responses = [
     $("#Q1").val(),
@@ -82,18 +93,8 @@ function getDestinationInfo(id) {
     if (response) {
       // console.log("Our response", response);
       // console.log("Respone.location", response.locationName)
+      locationName = response.locationName;
       getPointsOfInterest(response.locationName);
-      cityObject = {
-        name: response.locationName,
-        location: {
-          latitude: response.lat,
-          longitude: response.lon
-        },
-        interests: [],
-        survey: response.surveyPoints,
-        category: response.category
-      };
-      // console.log(cityObject);
     };
   });
 };
@@ -101,16 +102,6 @@ function getDestinationInfo(id) {
 function getPointsOfInterest(location) {
   $.get("/api/poi/" + location, function(responses) {
     // console.log(responses);
-    responses.forEach(function(response, index) {
-      var interestsObject = {
-        name: response.name,
-        description: response.description,
-        link: response.link,
-        photo: response.photo
-      };
-
-      cityObject.interests.push(interestsObject);
-    })
     // console.log(cityObject);
   });
 }

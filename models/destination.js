@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     surveyPoints: {
-      type: DataTypes.INTEGER
+      type: DataTypes.DECIMAL
     },
     category: {
       type: DataTypes.STRING

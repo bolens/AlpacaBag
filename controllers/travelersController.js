@@ -1,10 +1,25 @@
 var express = require("express");
 var router = express.Router();
 var db = require("../models");
+let cityObject = {
+  name: null,
+  location: {
+    latitude: null,
+    longitude: null
+  },
+  interests: [],
+  survey: null,
+  category: null
+};
 
 // get route -> main
 router.get("/", function(req, res) {
   res.render("index");
+});
+
+// Get route for destination
+router.get("/destination", function(req, res) {
+  res.render("destination", cityObject);
 });
 
 router.get("/survey", function(req, res) {
@@ -40,10 +55,22 @@ router.get("/api/poi/:destination", function(req, res) {
       destination: req.params.destination
     },
     include: [db.Destination]
-  }).then(function(result) {
-    console.log(result);
-    res.json(result);
+  }).then(function(results) {
+    // console.log(results);
+    results.forEach(function(result, index) {
+      var interestsObject = {
+        name: result.name,
+        description: result.description,
+        link: result.link,
+        photo: result.photo
+      };
+
+      cityObject.interests.push(interestsObject);
+    });
+    console.log(cityObject);
+    res.json(results);
     // res.render("handlebar", cityObject);
+    // res.render("destination", cityObject);
   });
 });
 
@@ -56,8 +83,12 @@ router.get("/api/destinations/:id", function(req, res) {
     include: [db.PoI]
   }).then(function(result) {
     // console.log(result);
+    cityObject.name = result.locationName;
+    cityObject.location.latitude = result.lat;
+    cityObject.location.longitude = result.lon;
+    cityObject.survey = result.surveyPoints;
+    cityObject.category = result.category;
     res.json(result);
-    res.render("destination", cityObject);
   });
 });
 
