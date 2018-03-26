@@ -20,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING
+    },
+    photo: {
+      type: DataTypes.STRING
     }
     // defaultValue: "Istanbul"
   });
