@@ -9,7 +9,8 @@ let cityObject = {
   },
   interests: [],
   survey: null,
-  category: null
+  category: null,
+  photo: null
 };
 
 // get route -> main
@@ -88,6 +89,7 @@ router.get("/api/destinations/:id", function(req, res) {
     cityObject.location.longitude = result.lon;
     cityObject.survey = result.surveyPoints;
     cityObject.category = result.category;
+    cityObject.photo = result.photo;
     res.json(result);
   });
 });
