@@ -129,12 +129,8 @@ button.btn {
   font-family: 'Farsan', cursive;
 }
 
-#destination {
-  max-height: 0px;
-  opacity: 0;
-  visibility: hidden;;
-  margin-bottom: 0em;
-  margin-top: -22px;
+#destination .card-image {
+  padding-top: 30%;
 }
 
 .form-container {

@@ -62,22 +62,23 @@
   };
   videoPlayer.on('ended', run);
 
+  // Our typed.js function
+  if ($('.typed').length > 0) {
+    var typed = new Typed('.typed', {
+      strings: [
+        // Are you ready to...
+        "",
+        "adventure?",
+        "relax?",
+        "go hiking?",
+        "discover new cuisine?",
+        "go exploring?",
+        "Alpaca Bag?"],
+      typeSpeed: 75,
+      backSpeed: 30,
+      smartBackspace: true,
+      cursorChar: '',
+    });
+  }
+
 })();
-
-
-// Our typed.js function
-var typed = new Typed('.typed', {
-  strings: [
-    // Are you ready to...
-    "",
-    "adventure?",
-    "relax?",
-    "go hiking?",
-    "discover new cuisine?",
-    "go exploring?",
-    "Alpaca Bag?"],
-  typeSpeed: 75,
-  backSpeed: 30,
-  smartBackspace: true,
-  cursorChar: '',
-});
