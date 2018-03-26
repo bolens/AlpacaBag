@@ -115,7 +115,7 @@ router.put("/api/destinations", function(req, res) {
 
 // POST route for creating destinations
 router.post("/api/destinations", function(req, res) {
-  db.Destination.createAll(
+  db.Destination.bulkCreate(
     req.body
   ).then(function(result) {
     res.json(result);
@@ -124,7 +124,7 @@ router.post("/api/destinations", function(req, res) {
 
 // POST route for creating a point of interest
 router.post("/api/poi", function(req, res) {
-  db.PoI.createAll(
+  db.PoI.bulkCreate(
     req.body
   ).then(function(result) {
     res.json(result);
