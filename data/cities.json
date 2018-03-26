@@ -123,7 +123,7 @@
     "destination": "Dubai",
     "description": "Go on an adventurous Desert Safari in a rugged SUV through the sand dunes outside Dubai",
     "link": "https://www.platinum-heritage.com/",
-    "photo": ["https://imgur.com/yCrxWqc", "https://imgur.com/Gcc6Cwa"]
+    "photo": "https://imgur.com/yCrxWqc"
   }, {
     "name": "View from top of Burj Khalifa",
     "destination": "Dubai",
@@ -153,7 +153,7 @@
     "destination": "Sydney",
     "description": "Go on a tour of the Sydney Harbour and view the Opera House from the water",
     "link": "https://www.aocruises.com.au/",
-    "photo": ["https://imgur.com/Pn6nijr", "https://imgur.com/UFAYMVW ", "https://imgur.com/xfNdsFZ"]
+    "photo": "https://imgur.com/Pn6nijr"
   }, {
     "name": "Bennelong",
     "destination": "Sydney",
@@ -171,7 +171,7 @@
     "destination": "Istanbul",
     "description": "Stroll around the heart of Istanbul and stop to admire the Independence Monument",
     "link": "https://www.greatistanbul.com/taksim.html",
-    "photo": ["https://imgur.com/bsh6a6T", "https://imgur.com/a/7DjTu"]
+    "photo": "https://imgur.com/bsh6a6T"
   }, {
     "name": "Blue Mosque",
     "destination": "Istanbul",
@@ -194,21 +194,20 @@
     "name": "See the Whirling Dervishes",
     "destination": "Istanbul",
     "description": "See a nighttime performance of the Whirling Dervish dancers",
-    "link": "
-    https: //www.theistanbulinsider.com/where-to-see-the-whirling-dervishes-in-istanbul/",
+    "link": "https://www.theistanbulinsider.com/where-to-see-the-whirling-dervishes-in-istanbul/",
       "photo": "https://imgur.com/Gcc6Cwa"
   }, {
     "name": "Central Restaurante",
     "destination": "Lima",
     "description": "Enjoy a dinner of eclectic and unique Peruvian dishes",
     "link": "http://centralrestaurante.com.pe/en/",
-    "photo": ["https://imgur.com/R3KE8Oz", "https://imgur.com/7FK9eE5"]
+    "photo": "https://imgur.com/R3KE8Oz"
   }, {
     "name": "Plaza de Armas",
     "destination": "Lima",
     "description": "Stroll around the large Plaza de Armas, which is located in the historic center of Lima. There are several important landmarks here including the Government Palace, the Cathedral of Lima, the Archbishop Palace, and a bronze fountain in the center dating back to 1650",
     "link": "http://www.visitperu.com/visit-peruinfo/english/ciudades.php?cod_depa=15",
-    "photo": ["https://imgur.com/vQYpYaI", "https://imgur.com/ik2fJbw"]
+    "photo": "https://imgur.com/vQYpYaI"
   }, {
     "name": "Barranco District",
     "destination": "Lima",
@@ -232,8 +231,7 @@
     "name": "Kahn el Khalili: Cairo's Souk",
     "destination": "Cairo",
     "description": "A large open-air market full of stores selling various wares. Be prepared to bargain hard. Take in the sights and smells and it is most lively at night",
-    "link": "
-    https: //www.lonelyplanet.com/egypt/cairo/attractions/khan-al-khalili/a/poi-sig/406432/355225",
+    "link": "https://www.lonelyplanet.com/egypt/cairo/attractions/khan-al-khalili/a/poi-sig/406432/355225",
       "photo": "https://imgur.com/n3RfnBO"
   }, {
     "name": "Pyramids of Giza",
@@ -246,7 +244,7 @@
     "destination": "Reykjavik",
     "description": "Start with a class tour of Iceland's most popular attractions outside Reykjavik",
     "link": "https://guidetoiceland.is/best-of-iceland/top-9-detours-on-the-golden-circle",
-    "photo": ["https://imgur.com/seVTx4P", "https://imgur.com/6rpKYh4"]
+    "photo": "https://imgur.com/seVTx4P"
   },
 
   {
@@ -291,7 +289,7 @@
     "destination": "Wellington",
     "description": "In a city with the most cafes per capita in the world, check out at least one cafe to get your java fix. Check out this unique venue and mingle with the Kiwis",
     "link": "https://flightcoffee.co.nz/",
-    "photo": ["https://imgur.com/ZyVHb5R", "https://imgur.com/rHi9Gbv"]
+    "photo": "https://imgur.com/ZyVHb5R"
   }, {
     "name": "Wellington Cable Car",
     "destination": "Wellington",
