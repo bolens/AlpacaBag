@@ -1,7 +1,8 @@
+DROP DATABASE if exists jcmjjn1myt9dw46d;
 
-CREATE DATABASE travel_db;
+CREATE DATABASE jcmjjn1myt9dw46d;
 
-USE travel_db;
+USE jcmjjn1myt9dw46d;
 
 
  
