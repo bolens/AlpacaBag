@@ -1,5 +1,5 @@
 let poi = [
-    //1)capetown
+    //1 Capetown
     {
         name: "Lion's Head",
         destination: 'Cape Town',
@@ -124,7 +124,7 @@ let poi = [
         description: 'Touzan is committed to the use of local, seasonal produce and ingredients from the suburbs of Kyoto, with our chefs putting their passion into the preparation of Japanese cuisine such as simple bowls and broiled dishes, sashimi, sushi and noodles.',
         link: 'https://kyoto.regency.hyatt.com/ja/hotel/dining/Touzan.html',
         photo: 'https://media-cdn.tripadvisor.com/media/photo-s/03/34/6a/bf/main-lobby.jpg'
-    }, 
+    },
     //6 Dubai
     {
         name: 'Dune Bashing',
@@ -323,7 +323,7 @@ let poi = [
         link: 'http://www.grillmarkadurinn.is/en/',
         photo: 'https://imgur.com/oYgEKP9'
     },
-    //Wellington 
+    //Wellington
     {
         name: "Civic Center",
         destination: 'Wellington',
@@ -368,38 +368,38 @@ let poi = [
     },
     // Las Vegas
     {
-        name: "Caesars Palace Casino”,
+        name: 'Caesars Palace Casino',
         destination: "Las Vegas",
-        description: "Test your luck at one of Caesar’s many slot machines or table games.If sports betting is more your style, Caesar’s offers a large sports book to help you hit it big.“,
+        description: 'Test your luck at one of Caesar’s many slot machines or table games. If sports betting is more your style, Caesar’s offers a large sports book to help you hit it big.',
         link: 'https://www.caesars.com/',
         photo: "https://imgur.com/TSLhRif"
     },
     {
-        name: "VooDoo Nightclub & Lounge”,
+        name: 'VooDoo Nightclub & Lounge',
         destination: "Las Vegas",
-        description: "On the 51st floor of the Rio, you’ll find but the VooDoo Lounge, which leads to an outdoor patio with a winding staircase that has some of the bests views in Las Vegas.“,
-        link: 'https://www.caesars.com/rio-las-vegas/things-to-do/voodoo-rooftop-nightclub#.WrgRDZPwZ24’,
+        description: 'On the 51st floor of the Rio, you’ll find but the VooDoo Lounge, which leads to an outdoor patio with a winding staircase that has some of the bests views in Las Vegas.',
+        link: "https://www.caesars.com/rio-las-vegas/things-to-do/voodoo-rooftop-nightclub#.WrgRDZPwZ24",
         photo: 'https://imgur.com/WwOTgVh'
     },
     {
-        name: "Picasso”,
-        destination: 'Las Vegas’,
-        description: "Dine at world renowned Executive Chef Julian Serrano’s restaurant.Enjoy the regional cuisines of Spain and France while you are surrounded by Pablo Picasso’s original paintings and ceramic pieces.“,
-        link: 'https://www.bellagio.com/en/restaurants/picasso.html?icid=GMB_Restaurants_Picasso’,
+        name: 'Picasso',
+        destination: "Las Vegas",
+        description: 'Dine at world renowned Executive Chef Julian Serrano’s restaurant.Enjoy the regional cuisines of Spain and France while you are surrounded by Pablo Picasso’s original paintings and ceramic pieces.',
+        link: "https://www.bellagio.com/en/restaurants/picasso.html?icid=GMB_Restaurants_Picasso",
         photo: "https://imgur.com/fiJR9id"
     },
     {
-        name: "O by Cirque Du Soleil”,
-        destination: 'Las Vegas’,
-        description: "Weaving a tapestry of artistry, surrealism and theatrical romance, ‘O’ was inspired by the concept of infinity and the elegance of water, world - class acrobats, synchronized swimmers and divers create a breathtaking experience.Located in the world famous Bellagio.“,
-        link: 'https://www.cirquedusoleil.com/o’,
+        name: 'O by Cirque Du Soleil',
+        destination: "Las Vegas",
+        description: 'Weaving a tapestry of artistry, surrealism and theatrical romance, ‘O’ was inspired by the concept of infinity and the elegance of water, world - class acrobats, synchronized swimmers and divers create a breathtaking experience.Located in the world famous Bellagio.',
+        link: "https://www.cirquedusoleil.com/o",
         photo: "https://imgur.com/3ZSAOC4"
     },
     {
-        name: "Mandalay Bay Beach”,
-        destination: 'Las Vegas’,
-        description: "Relax on Mandalay Bay’s famous real sand beach.The beach offers private cabanas for rent or you can float around in their lazy river.“,
-        link: 'https://www.mandalaybay.com/en/amenities/beach.html’,
+        name: 'Mandalay Bay Beach',
+        destination: "Las Vegas",
+        description: 'Relax on Mandalay Bay’s famous real sand beach.The beach offers private cabanas for rent or you can float around in their lazy river.',
+        link: "https://www.mandalaybay.com/en/amenities/beach.html",
         photo: "https://imgur.com/ZG4qMhL"
     }
 ]
