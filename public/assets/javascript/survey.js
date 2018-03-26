@@ -97,7 +97,7 @@ function getDestinationInfo(id) {
       getPointsOfInterest(response.locationName);
     };
   });
-};
+}
 
 function getPointsOfInterest(location) {
   $.get("/api/poi/" + location, function(responses) {
