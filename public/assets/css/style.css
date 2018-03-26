@@ -36,6 +36,12 @@ label {
 .hidden {
   visibility: hidden;
 }
+
+input[type=range]+.thumb.active .value {
+  margin-left: -1px;
+  margin-top: 0px;
+}
+
 .icon-container {
   position: fixed;
   height: 65px;
@@ -121,6 +127,14 @@ button.btn {
 }
 #about h2 {
   font-family: 'Farsan', cursive;
+}
+
+#destination {
+  max-height: 0px;
+  opacity: 0;
+  visibility: hidden;;
+  margin-bottom: 0em;
+  margin-top: -22px;
 }
 
 .form-container {
