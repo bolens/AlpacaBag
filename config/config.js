@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: "root",
-    password: process.env.DB_PASSWORD,
+    password: "Password@123",
     database: "travel_db",
     host: "localhost",
     dialect: "mysql",
@@ -15,10 +15,10 @@ module.exports = {
     dialect: "mysql"
   },
   production: {
-    username: "root",
-    password: null,
-    database: "database_production",
-    host: "127.0.0.1",
+    username: "utlldvphe7878qgp	",
+    password: "sz0vzqtuig47hai8",
+    database: "i4auhca843blqlg6",
+    host: "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     dialect: "mysql"
   }
 }
