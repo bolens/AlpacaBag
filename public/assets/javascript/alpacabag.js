@@ -66,7 +66,18 @@
 
 
 // Our typed.js function
-var typed = new Typed('.hero--text', {
-  strings: ["","Are you ready for your next adventure?", "Are you ready for maximum relaxation?",  "Are you ready to go hiking?", "Are you ready to discover new cuisines?", "Are you ready to go exploring?", "Are you ready to Alpaca Bag?"],
-  typeSpeed: 75
+var typed = new Typed('.typed', {
+  strings: [
+    // Are you ready to...
+    "",
+    "adventure?",
+    "relax?",
+    "go hiking?",
+    "discover new cuisine?",
+    "go exploring?",
+    "Alpaca Bag?"],
+  typeSpeed: 75,
+  backSpeed: 30,
+  smartBackspace: true,
+  cursorChar: '',
 });

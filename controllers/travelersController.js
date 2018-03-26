@@ -55,7 +55,7 @@ router.get("/api/destinations/:id", function(req, res) {
     },
     include: [db.PoI]
   }).then(function(result) {
-    console.log(result);
+    // console.log(result);
     res.json(result);
     res.render("destination", cityObject);
   });

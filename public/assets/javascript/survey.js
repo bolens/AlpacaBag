@@ -3,6 +3,14 @@ var userTotal = 0;
 var baseline = 100;
 var cityObject = {};
 
+$('#pack').on('click', (e) => {
+  e.preventDefault();
+  $('.form-container').addClass('active');
+  $('html, body').animate({
+    scrollTop: $("#survey").offset().top - 30
+  }, 1000);
+});
+
 function alpacaBag(result, callback) {
 
   var destination = $.get('/api/destinations', function(data) {
