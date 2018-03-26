@@ -46,7 +46,7 @@ let poi = [
     }, {
         name: 'Tree Bistro',
         destination: 'New York City',
-        description: 'A petite French bistro that expands its capacity in summer months with an ample backyard garden. It is a definite quaint backyard destination in New York's East Village neighborhood',
+        description: "A petite French bistro that expands its capacity in summer months with an ample backyard garden. It is a definite quaint backyard destination in New York's East Village neighborhood",
         link: 'http://treebistro.com/',
         photo: 'https://media-cdn.tripadvisor.com/media/photo-s/08/6a/9e/52/tree-bistro.jpg'
     }, {
@@ -174,11 +174,11 @@ let poi = [
         photo: ['https://imgur.com/Pn6nijr', 'https://imgur.com/UFAYMVW ', 'https://imgur.com/xfNdsFZ']
     },
     {
-        name: "Friggitoria",
+        name: "Bennelong",
         destination: 'Sydney',
-        description: 'Dinner in Sydney',
-        link: 'http://www.friggitoria.com.au/',
-        photo: ''
+        description: 'A destination in itself with seating right along the Sydney Harbour. Come for the atmosphere, stay for the modern Australian fare.',
+        link: 'https://www.bennelong.com.au/',
+        photo: 'https://imgur.com/a/5SgC3'
     },
 
     {
@@ -193,7 +193,7 @@ let poi = [
         name: "Taksim Square",
         destination: 'Istanbul',
         description: 'Stroll around the heart of Istanbul and stop to admire the Independence Monument',
-        link: 'www.greatistanbul.com/taksim.htm',
+        link: 'https://www.greatistanbul.com/taksim.html',
         photo: ['https://imgur.com/bsh6a6T', 'https://imgur.com/a/7DjTu']
     },
 
@@ -211,7 +211,15 @@ let poi = [
         description: 'Visit the historical Greek Orthodox Basilica in the lush Sultanahmet neighborhood',
         link: '',
         photo: 'https://imgur.com/J67OdHr'
-    }
+    },
+
+    {
+        name: "DogaDukkan Restaurant & Cafe",
+        destination: 'Istanbul',
+        description: 'Come taste some authentic Turkish dishes and local delicacies at this bustling cafe',
+        link: 'http://www.dogaldukkan.com.tr/index-EN.html',
+        photo: 'https://imgur.com/73ws2Pj'
+    },
 
     {
         name: "See the Whirling Dervishes",
@@ -240,7 +248,7 @@ let poi = [
     {
         name: "Barranco District",
         destination: 'Lima',
-        description: 'A bohemian district full of art and music. Night owls will feel at home here with extensive clubs. Walk down the Bajada de Baños, a stone walkway that leads down to the water',
+        description: 'A bohemian district full of art, music, and sidewalk restaurants. Night owls will feel at home here with extensive clubs. Walk down the Bajada de Baños, a stone walkway that leads down to the water',
         link: '',
         photo: 'https://imgur.com/Z5IeP4V'
     }
@@ -276,15 +284,6 @@ let poi = [
         link: 'https://www.nationalgeographic.com/archaeology-and-history/archaeology/giza-pyramids/',
         photo: 'https://imgur.com/a/HjmiR'
     },
-
-    {
-        name: "Kahn el Khalili: Cairo's Souk",
-        destination: 'Cairo',
-        description: 'A large open-air market full of stores selling various wares. Be prepared to bargain hard. Take in the sights and smells and it is most lively at night',
-        link: '',
-        photo: 'https://imgur.com/n3RfnBO'
-    },
-
     // 11 Reykjavik
     {
         name: "Golden Circle",
@@ -323,5 +322,84 @@ let poi = [
         description: "Dine in the restored Cinema which serves dishes based on Icelandic elements like rock and water. Branch out and sample puffin, reindeer or minke whale steak.",
         link: 'http://www.grillmarkadurinn.is/en/',
         photo: 'https://imgur.com/oYgEKP9'
+    },
+    //Wellington 
+    {
+        name: "Civic Center",
+        destination: 'Wellington',
+        description: "Start your exploration of central Wellington here. Venture to the nearby City to Sea Bridge along the waterfront, walk Oriental Bay, and shop along Lambton Quay",
+        link: '',
+        photo: 'https://imgur.com/a/nki5e'
+    },
+    {
+        name: "Hippopotamus Restaurant",
+        destination: 'Wellington',
+        description: "Dine with a fantastic view over Wellington with a mix of Kiwi & French plates. Try some NZ oysters or perhaps a Kiwi staple: Lamb. A great place to people watch and stay for drinks",
+        link: 'https://www.qthotelsandresorts.com/wellington/eat-drink/hippopotamus/',
+        photo: 'https://imgur.com/MzNW6WV'
+    },
+    {
+        name: "The Flight Coffee Hanger",
+        destination: 'Wellington',
+        description: "In a city with the most cafes per capita in the world, check out at least one cafe to get your java fix. Check out this unique venue and mingle with the Kiwis",
+        link: 'https://flightcoffee.co.nz/',
+        photo: ['https://imgur.com/ZyVHb5R', 'https://imgur.com/rHi9Gbv']
+    },
+    {
+        name: "Wellington Cable Car",
+        destination: 'Wellington',
+        description: "Take the cable car from Lambton Quay (main shopping street) and Kelburn (neighborhood in the hills) for views of Wellington and the surrounding bay. The last station is located right next to the Wellington Botanic Gardens, which is free and worth exploring.",
+        link: 'https://www.wellingtoncablecar.co.nz',
+        photo: 'https://imgur.com/BV85Hmn'
+    },
+    {
+        name: "Mount Victoria",
+        destination: 'Wellington',
+        description: "Fancy a hike? Take to the Mount Victoria walking track. From the summit there are 360 views of Wellington, the harbour, and the ocean beyond. Start from Oriental Parade and do not miss this filming location for Lord of the Rings",
+        link: 'https://www.newzealand.com/us/feature/mount-victoria/',
+        photo: 'https://imgur.com/a/yxH0s'
+    },
+    {
+        name: "Cuba Street",
+        destination: 'Wellington',
+        description: "District full of nightlife, performances, places to eat, and people watching. Perfect for lingering: the street is pedestrian-only",
+        link: 'https://www.newzealand.com/ie/article/cuban-evolution/',
+        photo: 'https://imgur.com/18SMn17'
+    },
+    // Las Vegas
+    {
+        name: "Caesars Palace Casino”,
+        destination: "Las Vegas",
+        description: "Test your luck at one of Caesar’s many slot machines or table games.If sports betting is more your style, Caesar’s offers a large sports book to help you hit it big.“,
+        link: 'https://www.caesars.com/',
+        photo: "https://imgur.com/TSLhRif"
+    },
+    {
+        name: "VooDoo Nightclub & Lounge”,
+        destination: "Las Vegas",
+        description: "On the 51st floor of the Rio, you’ll find but the VooDoo Lounge, which leads to an outdoor patio with a winding staircase that has some of the bests views in Las Vegas.“,
+        link: 'https://www.caesars.com/rio-las-vegas/things-to-do/voodoo-rooftop-nightclub#.WrgRDZPwZ24’,
+        photo: 'https://imgur.com/WwOTgVh'
+    },
+    {
+        name: "Picasso”,
+        destination: 'Las Vegas’,
+        description: "Dine at world renowned Executive Chef Julian Serrano’s restaurant.Enjoy the regional cuisines of Spain and France while you are surrounded by Pablo Picasso’s original paintings and ceramic pieces.“,
+        link: 'https://www.bellagio.com/en/restaurants/picasso.html?icid=GMB_Restaurants_Picasso’,
+        photo: "https://imgur.com/fiJR9id"
+    },
+    {
+        name: "O by Cirque Du Soleil”,
+        destination: 'Las Vegas’,
+        description: "Weaving a tapestry of artistry, surrealism and theatrical romance, ‘O’ was inspired by the concept of infinity and the elegance of water, world - class acrobats, synchronized swimmers and divers create a breathtaking experience.Located in the world famous Bellagio.“,
+        link: 'https://www.cirquedusoleil.com/o’,
+        photo: "https://imgur.com/3ZSAOC4"
+    },
+    {
+        name: "Mandalay Bay Beach”,
+        destination: 'Las Vegas’,
+        description: "Relax on Mandalay Bay’s famous real sand beach.The beach offers private cabanas for rent or you can float around in their lazy river.“,
+        link: 'https://www.mandalaybay.com/en/amenities/beach.html’,
+        photo: "https://imgur.com/ZG4qMhL"
     }
 ]
