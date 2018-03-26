@@ -1,6 +1,6 @@
-DROP DATABASE if exists i4auhca843blqlg6;
+DROP DATABASE if exists jcmjjn1myt9dw46d;
 
-CREATE DATABASE i4auhca843blqlg6;
+CREATE DATABASE jcmjjn1myt9dw46d;
 
-USE i4auhca843blqlg6;
+USE jcmjjn1myt9dw46d;
 
