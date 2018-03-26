@@ -3,7 +3,7 @@
 var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
-var mysql     = require('mysql');
+// var mysql     = require('mysql');
 var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.js')[env];
@@ -15,14 +15,14 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 };
 
-var connection;
-var dbLink= "mysql://utlldvphe7878qgp:sz0vzqtuig47hai8@gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/i4auhca843blqlg6";
-
-if(process.env.JAWSDB_URL){
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-}else{
-  connection = mysql.createConnection(dbLink);
-};
+// var connection;
+// var dbLink= "mysql://utlldvphe7878qgp:sz0vzqtuig47hai8@gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/i4auhca843blqlg6";
+//
+// if(process.env.JAWSDB_URL){
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// }else{
+//   connection = mysql.createConnection(dbLink);
+// };
 
 fs
   .readdirSync(__dirname)
