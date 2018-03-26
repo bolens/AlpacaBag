@@ -43,6 +43,12 @@ $("form").on("submit", function(e) {
     $('.form-container').addClass('active');
   }
 
+  if ($('#destination').hasClass('active')) {
+    $('#destination').removeClass('active');
+  } else {
+    $('#destination').addClass('active');
+  }
+
   var responses = [
     $("#Q1").val(),
     $("#Q2").val(),

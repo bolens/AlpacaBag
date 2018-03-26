@@ -70,7 +70,7 @@ router.get("/api/poi/:destination", function(req, res) {
     console.log(cityObject);
     res.json(results);
     // res.render("handlebar", cityObject);
-    // res.render("destination", cityObject);
+    res.redirect("/destination");
   });
 });
 
