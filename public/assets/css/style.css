@@ -96,6 +96,8 @@ img {
   text-shadow: 0px 1px 1px rgba(255, 255, 255, .6);
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 .hero--title.typed {
   height: 57px;

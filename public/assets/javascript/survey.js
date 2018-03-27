@@ -27,10 +27,11 @@ function alpacaBag(result, callback) {
       }
       cities.push(city);
     }
-
+    console.log(cities);
   }).then(function(data) {
     return callback();
   });
+  console.log(destination);
   return destination;
 };
 
@@ -67,10 +68,11 @@ $("form").on("submit", function(e) {
   responses[1] *= 1.5;
 
   var responseTotal = 0;
-
   responses.forEach(function(currentResponse, index) {
-    responseTotal += currentResponse;
+    responseTotal += parseInt(currentResponse);
   });
+  console.log("responses: ", responses);
+  console.log("total: ", responseTotal);
 
   var destinationMatch = alpacaBag(responseTotal, function() {
     var cityIndex = 0;
@@ -82,13 +84,15 @@ $("form").on("submit", function(e) {
         baseline = difference;
         cityIndex = i;
       };
+
     };
+    console.log("baseline=", baseline);
+    console.log("city index=", cityIndex);
 
     return cityIndex;
 
   }).then(function(data) {
-
-    // console.log("Destination Match Data =", data);
+    console.log("Destination Match Data =", data);
     getDestinationInfo(data + 1);
 
   });
