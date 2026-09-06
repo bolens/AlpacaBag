@@ -29,8 +29,6 @@ Temporary Items
 .apdisk
 
 ### Node ###
-# Package Lock, we do not need to track node_modules in this case
-package-lock.json
 # Logs
 logs
 *.log
@@ -86,9 +84,6 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# Yarn.lock
-yarn.lock
 
 # dotenv environment variables file
 .env
@@ -152,3 +147,8 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/node,macos,windows,sublimetext
 /node_modules
 /*-cov
+
+# Local tooling and runtime artifacts
+.env.*
+!.env.example
+!.env.*.example
